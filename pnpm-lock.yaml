@@ -20,9 +20,6 @@ importers:
 
   apps/http-server:
     dependencies:
-      dotenv:
-        specifier: ^17.4.2
-        version: 17.4.2
       express:
         specifier: ^5.2.1
         version: 5.2.1
@@ -39,6 +36,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@repo/db':
+        specifier: workspace:*
+        version: link:../../packages/prisma
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -52,9 +52,6 @@ importers:
         specifier: ^19.2.0
         version: 19.2.0(react@19.2.0)
     devDependencies:
-      '@repo/db':
-        specifier: workspace:*
-        version: link:../../packages/prisma
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
@@ -79,9 +76,6 @@ importers:
 
   apps/ws-server:
     dependencies:
-      dotenv:
-        specifier: ^17.4.2
-        version: 17.4.2
       ws:
         specifier: ^8.21.0
         version: 8.21.0

@@ -1,4 +1,3 @@
-import "dotenv/config"
 import { WebSocketServer } from 'ws';
 import { prismaClient } from "@repo/db"
 

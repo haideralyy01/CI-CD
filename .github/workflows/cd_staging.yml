@@ -21,7 +21,7 @@ jobs:
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /CI-CD
+            cd CI-CD/
             git pull origin main
             pnpm install --frozen-lockfile
             pnpm run build

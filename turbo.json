@@ -1,7 +1,7 @@
 {
   "$schema": "https://turborepo.dev/schema.json",
   "ui": "tui",
-  "concurrency": "1",
+  "concurrency": "4",
   "globalEnv": ["DATABASE_URL"],
   "tasks": {
     "build": {

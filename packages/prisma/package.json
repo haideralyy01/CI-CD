@@ -8,7 +8,9 @@
     ".": "./prisma/src/index.ts"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "db:migrate": "npx prisma migrate dev",
+    "db:push": "npx prisma db push",
+    "db:generate": "npx prisma generate"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",

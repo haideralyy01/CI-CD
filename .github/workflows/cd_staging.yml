@@ -14,10 +14,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install pnpm and pm2
-        run: |
-            npm install -g pnpm pm2
-
       - name: Deploy to server
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -25,8 +21,10 @@ jobs:
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd CI-CD/
+            export NVM_DIR="$HOME/.nvm"
+            source "$NVM_DIR/nvm.sh"
+            cd /var/www/bms-dev
             git pull origin main
             pnpm install --frozen-lockfile
             pnpm run build
-            pm2 restart all
+            pm2 restart all || pm2 start ecosystem.config.js

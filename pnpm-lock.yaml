@@ -33,6 +33,9 @@ importers:
       '@types/express':
         specifier: ^5.0.6
         version: 5.0.6
+      dotenv-cli:
+        specifier: latest
+        version: 11.0.0
 
   apps/web:
     dependencies:
@@ -67,6 +70,9 @@ importers:
       '@types/react-dom':
         specifier: 19.2.2
         version: 19.2.2(@types/react@19.2.2)
+      dotenv-cli:
+        specifier: latest
+        version: 11.0.0
       eslint:
         specifier: ^9.39.1
         version: 9.39.1(jiti@2.7.0)
@@ -89,6 +95,9 @@ importers:
       '@types/ws':
         specifier: ^8.18.1
         version: 8.18.1
+      dotenv-cli:
+        specifier: latest
+        version: 11.0.0
 
   packages/eslint-config:
     devDependencies:

@@ -22,7 +22,7 @@ jobs:
 
       - name: SSH into server
         run: |
-          ssh -o StrictHostKeyChecking=no root@${{ secrets.SERVER_IP }} << 'EOF'
+          ssh -o StrictHostKeyChecking=no root@${{ secrets.DEV_SERVER_IP }} << 'EOF'
             cd /var/www/bms-dev
             git pull origin main
             pnpm install

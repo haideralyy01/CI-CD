@@ -23,7 +23,7 @@ jobs:
           script: |
             export NVM_DIR="$HOME/.nvm"
             source "$NVM_DIR/nvm.sh"
-            cd /var/www/bms-dev
+            cd ~/CI-CD
             git pull origin main
             pnpm install --frozen-lockfile
             pnpm run build
